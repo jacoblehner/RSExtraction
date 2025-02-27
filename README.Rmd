@@ -76,7 +76,7 @@ library(viridis)
 
 f <- system.file("ex/elev.tif", package="terra")
 r <- rast(f) 
-a <- disagg(r, 5)
+a <- disagg(r, 15)
 data <- resample(r, a, "bilinear")
 plot(data, col=turbo(200), legend = T)
 
