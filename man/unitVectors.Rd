@@ -4,32 +4,18 @@
 \alias{unitVectors}
 \title{Surface Normal Unit Vectors of DEM}
 \usage{
-unitVectors(inRas, win = 5, outType = c("both", "mat", "rast"))
+unitVectors(inRas, win = 5)
 }
 \arguments{
 \item{inRas}{Input DEM SpatRaster.}
 
 \item{win}{Window size, should be an odd value greater than 1.(default 5)}
-
-\item{outType}{Type of output:
-mat - List of matrices
-rast - Multiband SpatRaster
-both - Matrices and rasters
-default (both)}
 }
 \value{
-XYZ components of the surface normal unit vectors, average elevation,
-and approximations of surface area and slope.
+XYZ components of the unit vectors, avg. elevation,
+and approximations of surface area and slope, returns a list containing both
+matrix and raster data structures.
 }
 \description{
 Surface Normal Unit Vectors of DEM
-}
-\examples{
-f <- base::system.file("ex/elev_vinschgau.tif", package="terra")
-r <- terra::rast(f)
-a <- terra::disagg(r, 5)
-r1 <- terra::resample(r, a, "bilinear")
-
-unitVec <- unitVectors(inRas = r1, win = 5, outType = 'both')
-terra::plot(test$rasts, col=grDevices::gray(1:200/200))
 }

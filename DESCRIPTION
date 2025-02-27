@@ -1,16 +1,16 @@
 Package: RSExtraction
-Title: What the Package Does (One Line, Title Case)
+Title: Ridge and swale feature extraction from DEM data
 Version: 0.0.0.9000
 Authors@R: 
     person("Jacob", "Lehner", , "jacobdlehner@gmail.com", role = c("aut", "cre"))
 Description: Functions for morphological investigation of topography following Lehner et al. (2024),
     through extracting surface normal vector surfaces and multi-dimensional ridge and swale patterns.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    Currently, this package can only be applied on DEM inputs projected in UTM.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: 
+    abind,
     base,
-    grDevices,
     terra
