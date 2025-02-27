@@ -14,3 +14,5 @@ Imports:
     abind,
     base,
     terra
+URL: https://github.com/jacoblehner/RSExtraction
+BugReports: https://github.com/jacoblehner/RSExtraction/issues
