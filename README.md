@@ -47,19 +47,11 @@ terra::plot(uv.List$uv.Rasts, col=gray(1:200/200), legend = FALSE)
 
 # Visualize ridge and swale features
 par(mfrow=c(1,2))
-<<<<<<< HEAD
 terra::plot(uv.List$uv.Rasts$nX, col= grDevices::gray(1:255/255), legend = FALSE, main = "Ridges.XY", xlim=c(610000,630000), ylim=c(5160000,5180000))
 terra::plot(uv.List$uv.Rasts$AvgEl, col= viridis::turbo(255, alpha=0.5), legend = FALSE, add = TRUE)
 terra::plot(rs.List$rs.Rasts$r.XY, col='black', legend = FALSE, add = TRUE)
 
 terra::plot(uv.List$uv.Rasts$nX, col= grDevices::gray(1:255/255), legend = FALSE, main = "Swales.XY", xlim=c(610000,630000), ylim=c(5160000,5180000))
-=======
-terra::plot(uv.List$uv.Rasts$nX, col= grDevices::gray(1:255/255), legend = FALSE, main = "Ridges.XY")
-terra::plot(uv.List$uv.Rasts$AvgEl, col= viridis::turbo(255, alpha=0.5), legend = FALSE, add = TRUE)
-terra::plot(rs.List$rs.Rasts$r.XY, col='black', legend = FALSE, add = TRUE)
-
-terra::plot(uv.List$uv.Rasts$nX, col= grDevices::gray(1:255/255), legend = FALSE, main = "Swales.XY")
->>>>>>> 27bacf1788f587b4326c23b0658810fcf89bf25c
 terra::plot(uv.List$uv.Rasts$AvgEl, col= viridis::turbo(255, alpha=0.5), legend = FALSE, add = TRUE)
 terra::plot(rs.List$rs.Rasts$s.XY, col='black', legend = FALSE, add = TRUE)
 ```
