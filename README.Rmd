@@ -28,7 +28,7 @@ You can install the development version of RSExtraction from [GitHub](https://gi
 # install.packages("pak")
 pak::pak("jacoblehner/RSExtraction")
 ```
-## Using the package:
+## Example usage:
 ```{r exampleUse, eval=FALSE, include=TRUE}
 # Load libraries
 library(RSExtraction)
