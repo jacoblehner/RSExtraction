@@ -21,8 +21,6 @@ pak::pak("jacoblehner/RSExtraction")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
 ``` r
 library(RSExtraction)
 
