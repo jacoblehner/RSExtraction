@@ -25,6 +25,43 @@ You can install the development version of RSExtraction from
 pak::pak("jacoblehner/RSExtraction")
 ```
 
+## Using the package:
+
+``` r
+# Load libraries
+library(RSExtraction)
+library(terra)
+library(viridis)
+
+# Load your DEM using terra package
+data <- rast("/path/to/DEM")
+
+# Extract features
+# set window size and if you would like to remove noise
+morph <- UV.RS.extract(inRas = data, win = 3, rm.S = TRUE)
+
+# Divide the results into the unit vector and ridge-swale components
+uv.List <- morph$Unit.Vectors # unit vectors
+rs.List <- morph$RS.Morph     # ridge-swale features
+
+# Optional: divide further to separate the raster and matrix components
+# unit vectors
+uv.Mats <- uv.List$uv.Mats
+uv.Rasts <- uv.List$uv.Rasts
+
+# ridge-swale features
+rs.Mats <- rs.List$rs.Mats
+rs.Rasts <- rs.List$rs.Rasts
+
+# The raster components are best for visualization and writing to file,
+# the matrix components are included as an additional resource for simplifying
+# further processing, if desired.
+
+# Example of writing features to file
+writeRaster(uv.Rasts, filename="/path/to/dir/rasName_UV.tif", overwrite = T)
+writeRaster(rs.Rasts, filename="/path/to/dir/rasName_RS.tif", overwrite = T)
+```
+
 ## Example 1: WGS 84 / UTM zone 32N (EPSG:32632) coord. reference
 
 ``` r
